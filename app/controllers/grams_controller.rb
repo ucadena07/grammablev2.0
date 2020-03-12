@@ -18,21 +18,21 @@ class GramsController < ApplicationController
 
   def edit 
     @gram = Gram.find_by_id(params[:id])
-    if @gram.blank?
-      render plain: 'Not Found :(', status: :not_found
-    end
+    return render_not_found if @gram.blank?
   end
 
   def show
     @gram = Gram.find_by_id(params[:id])
-    if @gram.blank?
-      render plain: 'Not Found :(', status: :not_found
-    end
+    return render_not_found if @gram.blank?
   end
 
   private 
 
   def gram_params
     params.require(:gram).permit(:message)
+  end
+
+  def render_not_found
+    render plain: 'Not Found :(', status: :not_found
   end
 end
