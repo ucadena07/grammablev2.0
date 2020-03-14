@@ -6,4 +6,4 @@ An Instagram clone that was built using industry-standard, test-driven developme
 
 try the app at https://grammablev20-ulises-cadena.herokuapp.com/
 <br />
-<img src="app/assets/images/Rspec1.png" alt="front page screenshot">
+<img src="app/assets/images/gram.png" alt="front page screenshot">
